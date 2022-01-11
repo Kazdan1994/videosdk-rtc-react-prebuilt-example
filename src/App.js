@@ -28,12 +28,12 @@ export default function App() {
 
       recordingEnabled: true,
       recordingEnabledByDefault: false,
-      recordingWebhookUrl: "https://www.videosdk.live/callback",
-      recordingAWSDirPath: `/meeting-recordings/${meetingId}/`, // automatically save recording in this s3 path
+      // recordingWebhookUrl: "https://www.videosdk.live/callback",
+      // recordingAWSDirPath: `/meeting-recordings/${meetingId}/`, // automatically save recording in this s3 path
 
       brandingEnabled: true,
-      brandLogoURL: "https://picsum.photos/200",
-      brandName: "Awesome startup",
+      brandLogoURL: 'https://womaccelerator.com/wp-content/uploads/2021/12/NV-logo-Womaccelerator-2022.jpg',
+      brandName: "Mentoraccess",
 
       participantCanLeave: true, // if false, leave button won't be visible
 
@@ -68,20 +68,11 @@ export default function App() {
         allowed: true, // participant can pin any participant in meeting
         layout: "SPOTLIGHT", // meeting layout - GRID | SPOTLIGHT | SIDEBAR
       },
-
-      leftScreen: {
-        // visible when redirect on leave not provieded
-        actionButton: {
-          // optional action button
-          label: "Video SDK Live", // action button label
-          href: "https://videosdk.live/", // action button href
-        },
-      },
     };
 
     const meeting = new VideoSDKMeeting();
     meeting.init(config);
   }, []);
 
-  return <div></div>;
+  return <div/>;
 }
